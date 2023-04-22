@@ -1,0 +1,6 @@
+pandas==2.0.0
+scikit-learn==1.2.2
+transformers==4.28.1
+tqdm==4.65.0
+numpy==1.23.5
+tk==0.1.0
