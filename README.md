@@ -6,12 +6,5 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvi
 pip install -r requirements.txt
 ```
 
-##### Using the code
-```console
-mkdir CS5001FinalProject
-cd CS5001FinalProject
-```
-and clone this repository
-
 ##### Download the dataset for this project
 https://www.kaggle.com/datasets/kazanova/sentiment140
