@@ -7,7 +7,7 @@ pip install -r requirements.txt
 ```
 
 ##### Using the code
-```bash
+```console
 mkdir CS5001FinalProject
 cd CS5001FinalProject
 ```
