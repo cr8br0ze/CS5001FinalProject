@@ -49,7 +49,7 @@ class modelFinetuning:
             self.model.save_pretrained(f"epoch{i}")
             self.tunedPath.append(f"epoch{i}")
             self.stopper.stopOrNot(valLoss)
-            if self.stopper.stop:
+            if self.stopper.stopp():
                 self.stopped = True
                 print("early stopped")
                 break

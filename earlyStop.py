@@ -16,3 +16,6 @@ class earlyStop:
         elif valLoss < self.minVal:
             self.minVal = valLoss
             self.count = 0
+
+    def stopp(self):
+        return self.stop
