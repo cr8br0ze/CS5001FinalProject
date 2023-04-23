@@ -1,5 +1,4 @@
-from transformers import BertTokenizerFast, BertForSequenceClassification, AdamW,\
-    get_scheduler
+from transformers import BertTokenizerFast, BertForSequenceClassification, get_scheduler
 from textEmbedding import tokenize
 from datasetPreprocess import twitterData
 import torch
@@ -13,6 +12,8 @@ class modelFinetuning:
         self.tokenizer = BertTokenizerFast.from_pretrained("bert-base-cased")
         self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
         self.model = BertForSequenceClassification.from_pretrained("bert-base-cased", num_labels = 2).to(self.device)
+        self.model = torch.compile(self.model)
+        self.model = self.model.to(self.device)
         self.data = twitterData("training.1600000.processed.noemoticon.csv")
         self.max = self.data.trainMax
         self.epoch = 13
@@ -120,4 +121,3 @@ class modelFinetuning:
 
         print(f"testing loss = {totalTestLoss / len(testLoaded)}")
         print(f"testing accuracy = {sum(probList) / len(testLoaded)}")
-
