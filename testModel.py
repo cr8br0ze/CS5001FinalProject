@@ -1,9 +1,7 @@
 from model import modelFinetuning
-import torch
 import unittest
 
-
-class TestModelFinetuning(unittest.TestCase):
+class testModelFinetuning(unittest.TestCase):
 
     def setUp(self):
         self.modelFinetuning = modelFinetuning()

@@ -10,7 +10,7 @@ class prediction():
         self.result = list()
 
     def predict(self, input):
-        result = "postive" if self.pipe(input)[0]["label"] == 'LABEL_1' else "negative"
+        result = "positive" if self.pipe(input)[0]["label"] == 'LABEL_1' else "negative"
         self.result.append({input:result})
         return result
 
