@@ -13,7 +13,7 @@ class modelFinetuning:
         self.tokenizer = BertTokenizerFast.from_pretrained("bert-base-cased")
         self.device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
         self.model = BertForSequenceClassification.from_pretrained("bert-base-cased", num_labels = 2).to(self.device)
-        self.data = dataset("training.1600000.processed.noemoticon.csv")
+        self.data = twitterData("training.1600000.processed.noemoticon.csv")
         self.max = self.data.trainMax
         self.epoch = 13
         self.stopper = earlyStop(2, 0)

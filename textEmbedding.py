@@ -23,5 +23,3 @@ class tokenize:
         tokenTypeId = self.embedding['token_type_ids'].to(self.device)
         attentionMask = self.embedding['attention_mask'].to(self.device)
         return inputId, tokenTypeId, attentionMask
-
-
