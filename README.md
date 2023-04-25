@@ -17,7 +17,7 @@ bash runFineTuning.sh
 ```
 ##### After finetuning
 ##### Or if did not finetune the model, you download my best finetuned model
-##### remember to donwload and untar the model folder into the same directory as the code
+##### remember to download and untar the model folder into the same directory as the code
 ```bash
 pip install gdown
 gdown 1YLygs0556rEhJF-B9l7-ezt0QV97IWHA
