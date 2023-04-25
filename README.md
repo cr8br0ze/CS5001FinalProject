@@ -9,7 +9,7 @@ pip install -r requirements.txt
 
 ##### Download the dataset for this project
 https://www.kaggle.com/datasets/kazanova/sentiment140
-##### remember to donwload the dataset into the same folder as the code
+##### remember to donwload and unzip the dataset into the same folder as the code
 
 ##### To run finetuning
 ```bash
